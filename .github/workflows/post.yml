@@ -18,17 +18,20 @@ jobs:
   post:
     runs-on: ubuntu-latest
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
 
-      - name: Instalar Python
+      - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
-      - name: Instalar biblioteca requests
+      - name: Instalar dependências
         run: pip install requests
 
-      - name: Rodar bot
+      - name: Executar bot
         run: python bot.py 0
