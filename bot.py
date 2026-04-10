@@ -3,7 +3,7 @@ import json
 import sys
 
 TOKEN = "8765865198:AAEYyQc41t2dL4eHiPs1wYMROcwtphT8x50"
-CHAT_ID = -1003853792884
+CHAT_ID = "-1003853792884"
 
 # horário do post
 post_number = int(sys.argv[1])
